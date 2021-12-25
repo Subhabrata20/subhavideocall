@@ -12,7 +12,8 @@ app.use('/peerjs', peer);
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 app.get('/' , (req,res)=>{
-  res.send(uuidv4());
+  //res.send(uuidv4());
+  res.send('video-1234');
 });
 app.get('/:room' , (req,res)=>{
     res.render('index' , {RoomId:req.params.room});
